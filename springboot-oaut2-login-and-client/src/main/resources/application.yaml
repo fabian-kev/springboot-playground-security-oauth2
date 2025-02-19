@@ -1,0 +1,33 @@
+server:
+  port: 8089
+spring:
+  application:
+    name: springboot-oaut2-login-and-client
+  security:
+    oauth2:
+      client:
+        registration:
+          herb:
+            registrationId: herb
+            client-name: herb
+            client-id: client
+            client-secret: secret
+            authorization-grant-type: authorization_code
+            redirect-uri: http://127.0.0.1:8089/login/oauth2/code/herb
+            scope: openid
+        provider:
+          herb:
+            issuer-uri: http://localhost:9000
+#        provider:
+#          herb:
+#            authorization-uri: http://localhost:9000/oauth2/v1/authorize
+#            token-uri: http://localhost:9000/oauth2/v1/token
+#            user-info-uri: http://localhost:9000/oauth2/v1/userinfo
+#            user-name-attribute: sub
+#            jwk-set-uri: http://localhost:9000/oauth2/v1/keys
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org:springframework.web: DEBUG
+    com.fabiankevin.springboot_oaut2_login_and_client: DEBUG
