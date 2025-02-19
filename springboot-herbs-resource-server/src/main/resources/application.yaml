@@ -5,8 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri:
-          jwk-set-uri: "https://localhost:9000/oauth2/v1/jwks"
+          issuer-uri: http://127.0.0.1:9000
 
 server:
   port: 8090
@@ -14,6 +13,6 @@ server:
 
 logging:
   level:
-    org.springframework.security: DEBUG
-    org:springframework.web: DEBUG
+    org.springframework.security: TRACE
+    org:springframework.web: TRACE
     com.fabiankevin.springboot_herbs_resource_server: DEBUG
