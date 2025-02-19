@@ -108,7 +108,7 @@ public class SecurityConfig {
 				.clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
 				.authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-				.redirectUri("http://127.0.0.1:8089/login/oauth2/code/herb")
+				.redirectUri("http://localhost:8089/login/oauth2/code/herb")
 //				.postLogoutRedirectUri("http://127.0.0.1:8089/logout")
 				.scope(OidcScopes.OPENID)
 				.scope(OidcScopes.PROFILE)
