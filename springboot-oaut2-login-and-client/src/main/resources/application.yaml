@@ -8,26 +8,24 @@ spring:
       client:
         registration:
           herb:
-            registrationId: herb
-            client-name: herb
-            client-id: client
-            client-secret: secret
+            registrationId: Herb
+            client-id: client12345
+            client-secret: client12345-secret
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            client-authentication-method: client_secret_basic
+            redirect-uri: http://localhost:8089/login/oauth2/code/herb
             scope: openid
         provider:
           herb:
             issuer-uri: http://localhost:9000
-#        provider:
-#          herb:
-#            authorization-uri: http://localhost:9000/oauth2/v1/authorize
-#            token-uri: http://localhost:9000/oauth2/v1/token
-#            user-info-uri: http://localhost:9000/oauth2/v1/userinfo
-#            user-name-attribute: sub
-#            jwk-set-uri: http://localhost:9000/oauth2/v1/keys
+            authorization-uri: http://127.0.0.1:9000/oauth2/authorize
+            token-uri: http://localhost:9000/oauth2/token
+            user-info-uri: http://localhost:9000/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: http://localhost:9000/oauth2/jwks
 
 logging:
   level:
-    org.springframework.security: DEBUG
-    org:springframework.web: DEBUG
+    org.springframework.security: TRACE
+    org.springframework.web: DEBUG
     com.fabiankevin.springboot_oaut2_login_and_client: DEBUG

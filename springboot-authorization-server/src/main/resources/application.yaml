@@ -2,8 +2,8 @@ server:
   port: 9000
 
 logging:
-    org.springframework.security: DEBUG
-    org:springframework.web: DEBUG
+    org.springframework.security: TRACE
+    org:springframework.web: TRACE
     com.fabiankevin.springboot_authorization_server: DEBUG
 
 spring:
